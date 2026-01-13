@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" lang="fr" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Universes/ME/CSS/MEstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+    <title>Accueil</title>
+  </head>
+
+  <body>
+     <header>
+      <a href="/index.html"><img id="main" src="/Universes/ME/img/MELogo.png" alt="" /></a>
+      <h1 id="titre"></h1>
+      <img src="/Universes/ME/icons/MEmenu-burger.svg" id="btnburger" alt="" />
+
+      <nav id="menuburger">
+        <a href="/Universes/ME/ME_Main.html" class="menu-link selected" alt="">Accueil</a>
+        <a href="/Universes/ME/ME_Codex.html" class="menu-link">Codex</a>
+        <a href="/Universes/ME/ME_Comms.php" class="menu-link">Comms</a>
+        <a href="/Universes/ME/ME_Timeline.html" class="menu-link">Timeline</a>
+        <a href="/Universes/ME/ME_Groupe.html" class="menu-link">Squad</a>
+        <a href="/api/user.php" class="menu-link">Compte</a>
+      </nav>
+    </header>
+
+      <article class="citation">
+        <h2>Commander Shepard, 2285</h2>
+        <p>
+          "This war's brought us pain, and suffering, and loss. But it's also
+          brought us together, as soldiers, allies... friends. This bond that
+          ties us together is something that the Reapers will never understand.
+          It's more powerful than any weapon, stronger than any ship. It can't
+          be taken or destroyed. The next few hours will decide the fate of
+          everyone in the galaxy. Every mother. Every son. Every unborn child.
+          They're trusting you. Depending on you to win them their future. A
+          future free from the threat of the Reapers! But take heart! Look
+          around you! You're not in this fight alone. We face our enemy
+          together, and together, we will defeat them!"
+        </p>
+      </article>
+      
+    <main>
+
+
+      <article class="intro">
+        <h2>Année galactique 2205</h2>
+        <br />
+        <p>
+          Voilà maintenant près de vingt ans que s’est achevée la “Guerre du
+          Dernier Cycle”, guerre gagnée de haute lutte contre les Moissonneurs
+          par les races constituant la communauté galactique. Depuis des temps
+          immémoriaux, cette race synthétique surgissait du néant tous les 50
+          000 ans, avec pour seul objectif l’éradication méthodique des races
+          organiques les plus avancées de la Galaxie. Vingt ans donc que les 4
+          races les plus influentes lèchent leurs plaies et tentent de remettre
+          la Galaxie en état de marche depuis leur siège au Conseil de la
+          Citadelle : les Asari tout d’abord, influentes et diplomates, les
+          Turiens, farouches et inflexibles, les Galariens, versés dans les
+          sciences et l’espionnage, et enfin les Humains, imprévisibles,
+          ambitieux, mais également les derniers venus sur la scène galactique.
+          D’autres races les y assistent, à des degrés divers d’implication :
+          les Krogans, robustes et bagarreurs, les Quariens, survivants et
+          inventifs, ainsi que les Volus, les Hanari, les Elcors, les Butariens,
+          les Drells… C’est au service du Conseil, et plus précisément du
+          Ministère de la Défense Concilien, que vous officierez comme agent
+          d’une unité G.E.I.S.T. (Groupe d’Enquête, Infiltration et Sécurisation
+          Trans’espèce), sous la seule autorité d’un Spectre qui ne connaît de
+          juridiction que la sienne. Entouré de compagnons tous experts dans des
+          domaines aussi variés que la biotique, les disciplines militaires, la
+          technologie, l’espionnage, ou encore la diplomatie, votre mission sera
+          d’empêcher à toute force que la Galaxie ne sombre à nouveau dans le
+          chaos, et qu’un événement tel que les Moissonneurs, ou pire encore, ne
+          se reproduise.
+        </p>
+      </article>
+
+      <img id="Cover" src="/Universes/ME/img/Cover.webp" alt="" />
+      <!-- Menu latéral -->
+    <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+        <rect x="0" y="0" width="64" height="32" fill="#1c2330"/>
+
+  <path d="M6 16 L20 4 L20 28 Z" stroke="#ff1a1a" stroke-width="3" fill="#ff1a1a"/>
+  <rect x="20" y="10" width="40" height="12" fill="#ff1a1a"/>
+  <line x1="28" y1="12" x2="48" y2="12" stroke="#ffffff" stroke-width="1"/>
+  <line x1="28" y1="20" x2="48" y2="20" stroke="#ffffff" stroke-width="1"/>
+</svg>
+
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+    </main>
+
+
+    <footer class="footer">
+      COPYRIGHT Renaud Lottiaux<br />
+      COPYRIGHT Bioware <br />
+    </footer>
+  </body>
+</html>

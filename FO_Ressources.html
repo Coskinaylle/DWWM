@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Universes/FO/CSS/FOstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+  <title>Ressources</title>
+</head>
+
+<body>
+    <header>
+      <a href="/index.html"
+        ><img id="main" src="/Universes/FO/img/FalloutLogo.png" alt=""
+      /></a>
+      <h1 id="titre"></h1>
+      <img src="/Universes/FO/icons/FOmenu-burger.svg" id="btnburger" alt="" />
+
+      <nav id="menuburger">
+        <a href="/Universes/FO/FO_Main.html">Accueil</a>
+        <a href="/Universes/FO/FO_Ressources.html" class="selected">Ressources</a>
+        <a href="/Universes/FO/FO_Résumé.html">Résumé</a>
+        <a href="/Universes/FO/FO_Timeline.html">Timeline</a>
+        <a href="/Universes/FO/FO_Calendrier.php">Agenda</a>
+        <a href="/api/user.php">Compte</a>
+
+      </nav>
+    </header>
+
+  <main>
+    <img src="/Universes/FO/img/WorldMap.png" id="worldmap" class="img" alt="">
+
+    <section class="liens">
+    <a href="/Universes/FO/FO_Persos.html">Feuilles de personnage</a>
+    <a href="blank">Documents</a>
+    <a href="blank">Liens</a>
+    </section>
+    
+    <section class="regles">
+    <h3>Règles rapides</h3>
+      <ul>
+        <li>Perte d'état d'une arme: 5 échecs ou 1 échec critique</li>
+        <li>Perte d'état d'une armure: encaisser 5x des dégâts ou 2x la CA en un coup</li>
+      </ul>
+      
+      <ul>
+        <li>6 cases d'état cochées: 5% de malus</li>
+        <li>7 cases d'état cochées: 10% de malus</li>
+        <li>8 cases d'état cochées: 15% de malus</li>
+        <li>9 cases d'état cochées: 20% de malus</li>
+        <li>10 cases d'état cochées: équipement détruit</li>
+      </ul>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Jours</th>
+            <th>Malus de faim</th> 
+            <th>Malus de soif</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>-</td>
+            <td>10%</td>
+          <tr>
+            <td>2</td>
+            <td>10%</td>
+            <td>30%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>20%</td>
+            <td>50%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>30%</td>
+            <td>Mort</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>40%</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>50%</td>
+            <td>-</td>
+          </tr>
+            <td>7</td>
+            <td>Mort</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+        <ul>
+         <li>Accroupi: +10% de toucher; CA 3; 2PA pour se déplacer</li>
+         <li>Allongé: +25% de toucher; CA 1; 4PA pour se déplacer</li>
+        </ul>
+        <ul>
+         <li>Préparation: +5% / round, 4 rounds max</li>
+         <li>Se défendre: convertit les PA restants en CA</li>
+         <li>Utiliser un objet: 3PA</li>
+         <li>S'équiper d'un objet: 4PA</li>
+         <li>Ramasser un objet: 4PA</li>
+         <li>Recharger: 2PA</li>
+         <li>Utiliser un compétence: déterminé par le MJ</li>
+         <li>Se soigner: cf Règles</li>
+         <li>Changer de position; 2PA</li>
+         <li>Se relever: 4PA</li>
+         <li>Poser une mine: 6PA</li>
+         <li>Utiliser de l'artillerie: cf Règles</li>
+        </ul>
+    </section>
+    
+    <img src="/Universes/FO/img/IlluRessources.webp" class="img" alt="">
+  </main>
+
+  <!-- Menu latéral -->
+  <aside>
+    <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+          <path class="pipboy" d="M20 4 L6 16 L20 28" />
+          <path class="pipboy" d="M20 8 H58 V24 H20" />
+        </svg>
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM <br>
+    COPYRIGHT 2075-2077 ROBCO-INDUSTRIES <br>
+    -Display 1-
+  </footer>
+</body> 
+</html>

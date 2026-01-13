@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" lang="fr" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Universes/SW/CSS/SWstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+    <title>Accueil</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"
+        ><img id="logo" src="/Universes/SW/img/Star_Wars_Logo.png" alt=""/></a>
+
+      <h1 id="titre"></h1>
+              <img src="/Universes/ME/icons/MEmenu-burger.svg" id="btnburger" alt="" />
+
+
+      <nav id="menuburger">
+        <a href="/Universes/SW/SW_Main.html" class="menu-link selected" alt="">Accueil</a>
+        <a href="/Universes/SW/SW_Data.html" class="menu-link">Data</a>
+        <a href="/Universes/SW/SW_Link.php" class="menu-link">Commlink</a>
+        <a href="/Universes/SW/SW_Timeline.html" class="menu-link">Timeline</a>
+        <a href="/Universes/SW/SW_Groupe.html" class="menu-link">Groupe</a>
+        <a href="/api/user.php" class="menu-link">Compte</a>
+        </nav>
+
+   </header>
+
+
+    <article class="citation">
+      <h2>"Scoundrel? Scoundrel. I like the sound of that."</h2>
+      <p>Han Solo, to Leia Organa</p>
+    </article>
+
+    <main class="principal">
+      <article class="intro">
+        <h1>
+          Ce devait être une mission facile. Un bref saut dans l’hyperespace,
+          une planète isolée, et pas un tir de blaster... Mais les missions
+          faciles n’existent pas, surtout aux frontières de l’Empire...
+        </h1>
+        <br />
+        <p>
+          C’est une période de troubles où l’Empire s’efforce de maintenir son
+          emprise sur la galaxie, en proie à la guerre civile. Aux confins de
+          son domaine, des vauriens et des contrebandiers, des chasseurs de
+          primes et des bandits, des explorateurs et des exilés luttent pour
+          leur survie. Et c’est justement ce que vous propose ce jeu de rôle,
+          des « rebus » de la société qui tentent de s’en sortir. De petits vols
+          aux braquages de grande envergure, de services de renseignements à la
+          mission où vous êtes clairement sacrifiable, il vous faudra vous en
+          sortir et surtout jouer au chat et à la souris avec l’Empire qui voit
+          d’un mauvais oeil votre présence.
+        </p>
+      </article>
+
+      <img id="Cover" src="/Universes/SW/img/rulebook.jpg" alt="" />
+
+      <!-- menu latéral -->
+          <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+  <path d="M6 16 L20 4 L20 28 Z" stroke="#00bfff" stroke-width="3" fill="#00bfff"/>
+  <rect x="20" y="10" width="40" height="12" fill="#00bfff"/>
+  <line x1="28" y1="12" x2="48" y2="12" stroke="#ffffff" stroke-width="1"/>
+  <line x1="28" y1="20" x2="48" y2="20" stroke="#ffffff" stroke-width="1"/>
+</svg>
+
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+    </main>
+
+
+    <footer class="footer">COPYRIGHT Lucasfilm LTD</footer>
+  </body>
+</html>

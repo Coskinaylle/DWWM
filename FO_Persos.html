@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" lang="fr" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Universes/FO/CSS/FOstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+    <title>Feuilles de personnage</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"
+        ><img id="main" src="/Universes/FO/img/FalloutLogo.png" alt=""
+      /></a>
+      <h1 id="titre"></h1>
+      <img src="/Universes/FO/icons/FOmenu-burger.svg" id="btnburger" alt="" />
+
+      <nav id="menuburger">
+        <a href="/api/user.php">Compte</a>
+        <a style="cursor: pointer;" onclick="history.back()">Retour</a>
+      </nav>
+    </header>
+
+    <main id="persos">
+      <div class="perso">
+      <h6>Feuille de perso 1</h6>
+      <a href="../../Common/PDF/Feuille de perso v1.1.pdf"><img class="Feuille" src="/Universes/FO/img/goule.png" alt="" /></a>
+      </div>
+      <div class="perso">
+      <h6>Feuille de perso 2</h6>
+      <a href="../../Common/PDF/Feuille de perso Gröth.pdf"><img class="Feuille" src="/Universes/FO/img/mutante.png" alt="" /></a>
+      </div>
+      <div class="perso">
+      <h6>Feuille de perso 3</h6>
+      <a href="../../Common/PDF/Feuille de perso Lily.pdf"><img class="Feuille" src="/Universes/FO/img/médic.png" alt="" /></a>
+      </div>
+      <div class="perso">
+      <h6>Feuille de perso 4</h6>
+      <a href="../../Common/PDF/Feuille de perso Vincent.pdf"><img class="Feuille" src="/Universes/FO/img/soldat.png" alt="" /></a>
+      </div>
+      <img id="NukaCola" src="/Universes/FO/img/NukaCola.jpeg" alt=""/>
+    </main>
+
+  <!-- Menu latéral -->
+  <aside>
+    <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+          <path class="pipboy" d="M20 4 L6 16 L20 28" />
+          <path class="pipboy" d="M20 8 H58 V24 H20" />
+        </svg>
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+  </aside>
+
+    <footer class="footer">
+      ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM <br />
+      COPYRIGHT 2075-2077 ROBCO-INDUSTRIES <br />
+      -Display 1-
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Feuille de personnage - Fallout RPG</title>
+</head>
+<body>
+
+<h1>Feuille de personnage - Fallout RPG</h1>
+
+<!-- JOUEUR -->
+<section>
+  <h2>Joueur</h2>
+  <label for="joueur">Nom du joueur :</label>
+  <input type="text" id="joueur" name="joueur">
+</section>
+
+<!-- PERSONNAGE -->
+<section>
+  <h2>Personnage</h2>
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" name="nom"><br>
+
+  <label for="metier">Métier :</label>
+  <input type="text" id="metier" name="metier"><br>
+
+  <label for="race">Race :</label>
+  <input type="text" id="race" name="race"><br>
+
+  <label for="sexe">Sexe :</label>
+  <input type="text" id="sexe" name="sexe"><br>
+
+  <label for="age">Âge :</label>
+  <input type="number" id="age" name="age"><br>
+
+  <label for="taille">Taille :</label>
+  <input type="text" id="taille" name="taille"><br>
+
+  <label for="poids">Poids :</label>
+  <input type="text" id="poids" name="poids"><br>
+
+  <label for="peau">Peau :</label>
+  <input type="text" id="peau" name="peau"><br>
+
+  <label for="dextrie">Dextrie :</label>
+  <input type="text" id="dextrie" name="dextrie"><br>
+
+  <label for="yeux">Yeux :</label>
+  <input type="text" id="yeux" name="yeux"><br>
+
+  <label for="cheveux">Cheveux :</label>
+  <input type="text" id="cheveux" name="cheveux"><br>
+</section>
+
+<!-- SPECIAL -->
+<section>
+  <h2>S.P.E.C.I.A.L.</h2>
+  <label for="strength">Strength :</label><input type="number" id="strength" name="strength" min="0"><br>
+  <label for="perception">Perception :</label><input type="number" id="perception" name="perception" min="0"><br>
+  <label for="endurance">Endurance :</label><input type="number" id="endurance" name="endurance" min="0"><br>
+  <label for="charisme">Charisme :</label><input type="number" id="charisme" name="charisme" min="0"><br>
+  <label for="intelligence">Intelligence :</label><input type="number" id="intelligence" name="intelligence" min="0"><br>
+  <label for="agilite">Agilité :</label><input type="number" id="agilite" name="agilite" min="0"><br>
+  <label for="luck">Chance :</label><input type="number" id="luck" name="luck" min="0"><br>
+</section>
+
+<!-- ATTRIBUTS SECONDAIRES -->
+<section>
+  <h2>Attributs secondaires</h2>
+  <label for="ca_base">CA Base :</label><input type="number" id="ca_base" name="ca_base"><br>
+  <label for="ca_armure">Armure :</label><input type="number" id="ca_armure" name="ca_armure"><br>
+  <label for="ca_total">Total :</label><input type="number" id="ca_total" name="ca_total" readonly><br>
+</section>
+
+<!-- PERSONNALITE -->
+<section>
+  <h2>Personnalité & données</h2>
+  <label for="personnalite">Personnalité :</label><input type="text" id="personnalite" name="personnalite"><br>
+  <label for="sequence">Séquence :</label><input type="number" id="sequence" name="sequence"><br>
+  <label for="chance_critique">Chance de critique (%) :</label><input type="number" id="chance_critique" name="chance_critique" min="0" max="100"><br>
+  <label for="portee">Portée :</label><input type="text" id="portee" name="portee"><br>
+  <label for="degats_melee">Dégâts en mêlée :</label><input type="text" id="degats_melee" name="degats_melee"><br>
+  <label for="detection">Détection :</label><input type="text" id="detection" name="detection"><br>
+</section>
+
+<!-- VICES & VERTUS -->
+<section>
+  <h2>Vices & Vertus</h2>
+  <label for="vices_vertus">Décrivez :</label><br>
+  <textarea id="vices_vertus" name="vices_vertus" rows="4" cols="80" placeholder="Ex : Courageux mais colérique..."></textarea>
+</section>
+
+<!-- TRAITS -->
+<section>
+  <h2>Traits</h2>
+  <label for="traits">Traits :</label><br>
+  <textarea id="traits" name="traits" rows="4" cols="80" placeholder="Ex : Rapide, Fouineur..."></textarea>
+</section>
+
+<!-- AVANCEMENT -->
+<section>
+  <h2>Avancement</h2>
+  <label for="niveau">Niveau :</label><input type="number" id="niveau" name="niveau" min="1" value="1"><br>
+  <label for="xp_actuel">XP actuel :</label><input type="number" id="xp_actuel" name="xp_actuel" min="0"><br>
+  <label for="xp_niveau_suivant">XP pour niveau suivant :</label><input type="number" id="xp_niveau_suivant" name="xp_niveau_suivant" min="0"><br>
+  <label for="karma">Karma :</label><input type="number" id="karma" name="karma"><br>
+
+  <fieldset>
+    <legend>Gains par niveau</legend>
+    <label for="gain_sante">Santé :</label><input type="number" id="gain_sante" name="gain_sante" min="0"><br>
+    <label for="gain_competences">Compétences :</label><input type="text" id="gain_competences" name="gain_competences" placeholder="+1 armes légères"><br>
+    <label for="don_par_niveau">Don tous les X niveaux :</label><input type="text" id="don_par_niveau" name="don_par_niveau" placeholder="Ex : tous les 2 niveaux"><br>
+  </fieldset>
+
+  <label for="titres_karmiques">Titres karmiques :</label><br>
+  <textarea id="titres_karmiques" name="titres_karmiques" rows="3" cols="80"></textarea>
+</section>
+
+<!-- COMPETENCES -->
+<section>
+  <h2>Compétences</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Compétence</th><th>Favorite</th><th>Base</th><th>Bonus</th><th>Malus</th><th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Armes légères</td>
+        <td><input type="checkbox" name="fav_armes_legere"></td>
+        <td><input type="number" name="base_armes_legere" value="0"></td>
+        <td><input type="number" name="bonus_armes_legere" value="0"></td>
+        <td><input type="number" name="malus_armes_legere" value="0"></td>
+        <td><input type="number" name="total_armes_legere" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Armes lourdes</td>
+        <td><input type="checkbox" name="fav_armes_lourdes"></td>
+        <td><input type="number" name="base_armes_lourdes" value="0"></td>
+        <td><input type="number" name="bonus_armes_lourdes" value="0"></td>
+        <td><input type="number" name="malus_armes_lourdes" value="0"></td>
+        <td><input type="number" name="total_armes_lourdes" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Armes à énergie</td>
+        <td><input type="checkbox" name="fav_armes_energie"></td>
+        <td><input type="number" name="base_armes_energie" value="0"></td>
+        <td><input type="number" name="bonus_armes_energie" value="0"></td>
+        <td><input type="number" name="malus_armes_energie" value="0"></td>
+        <td><input type="number" name="total_armes_energie" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Armes de mêlée</td>
+        <td><input type="checkbox" name="fav_armes_melee"></td>
+        <td><input type="number" name="base_armes_melee" value="0"></td>
+        <td><input type="number" name="bonus_armes_melee" value="0"></td>
+        <td><input type="number" name="malus_armes_melee" value="0"></td>
+        <td><input type="number" name="total_armes_melee" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Armes de jet</td>
+        <td><input type="checkbox" name="fav_armes_jet"></td>
+        <td><input type="number" name="base_armes_jet" value="0"></td>
+        <td><input type="number" name="bonus_armes_jet" value="0"></td>
+        <td><input type="number" name="malus_armes_jet" value="0"></td>
+        <td><input type="number" name="total_armes_jet" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Corps à corps</td>
+        <td><input type="checkbox" name="fav_corps_a_corps"></td>
+        <td><input type="number" name="base_corps_a_corps" value="0"></td>
+        <td><input type="number" name="bonus_corps_a_corps" value="0"></td>
+        <td><input type="number" name="malus_corps_a_corps" value="0"></td>
+        <td><input type="number" name="total_corps_a_corps" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Premiers secours</td>
+        <td><input type="checkbox" name="fav_premiers_secours"></td>
+        <td><input type="number" name="base_premiers_secours" value="0"></td>
+        <td><input type="number" name="bonus_premiers_secours" value="0"></td>
+        <td><input type="number" name="malus_premiers_secours" value="0"></td>
+        <td><input type="number" name="total_premiers_secours" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Médecin</td>
+        <td><input type="checkbox" name="fav_medecin"></td>
+        <td><input type="number" name="base_medecin" value="0"></td>
+        <td><input type="number" name="bonus_medecin" value="0"></td>
+        <td><input type="number" name="malus_medecin" value="0"></td>
+        <td><input type="number" name="total_medecin" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Discrétion</td>
+        <td><input type="checkbox" name="fav_discretion"></td>
+        <td><input type="number" name="base_discretion" value="0"></td>
+        <td><input type="number" name="bonus_discretion" value="0"></td>
+        <td><input type="number" name="malus_discretion" value="0"></td>
+        <td><input type="number" name="total_discretion" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Crochetage</td>
+        <td><input type="checkbox" name="fav_crochetage"></td>
+        <td><input type="number" name="base_crochetage" value="0"></td>
+        <td><input type="number" name="bonus_crochetage" value="0"></td>
+        <td><input type="number" name="malus_crochetage" value="0"></td>
+        <td><input type="number" name="total_crochetage" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Larcin</td>
+        <td><input type="checkbox" name="fav_larcin"></td>
+        <td><input type="number" name="base_larcin" value="0"></td>
+        <td><input type="number" name="bonus_larcin" value="0"></td>
+        <td><input type="number" name="malus_larcin" value="0"></td>
+        <td><input type="number" name="total_larcin" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Pièges</td>
+        <td><input type="checkbox" name="fav_pieges"></td>
+        <td><input type="number" name="base_pieges" value="0"></td>
+        <td><input type="number" name="bonus_pieges" value="0"></td>
+        <td><input type="number" name="malus_pieges" value="0"></td>
+        <td><input type="number" name="total_pieges" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Science</td>
+        <td><input type="checkbox" name="fav_science"></td>
+        <td><input type="number" name="base_science" value="0"></td>
+        <td><input type="number" name="bonus_science" value="0"></td>
+        <td><input type="number" name="malus_science" value="0"></td>
+        <td><input type="number" name="total_science" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Réparation</td>
+        <td><input type="checkbox" name="fav_reparation"></td>
+        <td><input type="number" name="base_reparation" value="0"></td>
+        <td><input type="number" name="bonus_reparation" value="0"></td>
+        <td><input type="number" name="malus_reparation" value="0"></td>
+        <td><input type="number" name="total_reparation" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Pilotage</td>
+        <td><input type="checkbox" name="fav_pilotage"></td>
+        <td><input type="number" name="base_pilotage" value="0"></td>
+        <td><input type="number" name="bonus_pilotage" value="0"></td>
+        <td><input type="number" name="malus_pilotage" value="0"></td>
+        <td><input type="number" name="total_pilotage" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Discours</td>
+        <td><input type="checkbox" name="fav_discours"></td>
+        <td><input type="number" name="base_discours" value="0"></td>
+        <td><input type="number" name="bonus_discours" value="0"></td>
+        <td><input type="number" name="malus_discours" value="0"></td>
+        <td><input type="number" name="total_discours" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Troc</td>
+        <td><input type="checkbox" name="fav_troc"></td>
+        <td><input type="number" name="base_troc" value="0"></td>
+        <td><input type="number" name="bonus_troc" value="0"></td>
+        <td><input type="number" name="malus_troc" value="0"></td>
+        <td><input type="number" name="total_troc" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Jeu</td>
+        <td><input type="checkbox" name="fav_jeu"></td>
+        <td><input type="number" name="base_jeu" value="0"></td>
+        <td><input type="number" name="bonus_jeu" value="0"></td>
+        <td><input type="number" name="malus_jeu" value="0"></td>
+        <td><input type="number" name="total_jeu" value="0" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Survie</td>
+        <td><input type="checkbox" name="fav_survie"></td>
+        <td><input type="number" name="base_survie" value="0"></td>
+        <td><input type="number" name="bonus_survie" value="0"></td>
+        <td><input type="number" name="malus_survie" value="0"></td>
+        <td><input type="number" name="total_survie" value="0" readonly></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- SANTÉ -->
+<section>
+  <h2>Santé</h2>
+  <label for="pvs_max">PVS max :</label><input type="number" id="pvs_max" name="pvs_max"><br>
+  <label for="pvs_actuels">PVS actuels :</label><input type="number" id="pvs_actuels" name="pvs_actuels"><br>
+  <label for="taux_recup">Taux de récupération :</label><input type="text" id="taux_recup" name="taux_recup" placeholder="Ex : 1 PV / h"><br>
+
+  <label for="rads">Radiations :</label><input type="number" id="rads" name="rads"><br>
+  <label for="resistance_rads">Résistance aux radiations :</label><input type="number" id="resistance_rads" name="resistance_rads"><br>
+
+  <label for="poison">Poison :</label><input type="number" id="poison" name="poison"><br>
+  <label for="resistance_poison">Résistance au poison :</label><input type="number" id="resistance_poison" name="resistance_poison"><br>
+
+  <label for="points_abri">Points d'abri :</label><input type="number" id="points_abri" name="points_abri"><br>
+  <label for="limite_abri">Limite d'abri :</label><input type="number" id="limite_abri" name="limite_abri"><br>
+
+  <label for="choc_max">Choc systémique max :</label><input type="number" id="choc_max" name="choc_max"><br>
+  <label for="choc_actuel">Choc systémique actuel :</label><input type="number" id="choc_actuel" name="choc_actuel"><br>
+
+  <fieldset>
+    <legend>Fatigue</legend>
+    <label><input type="checkbox" name="fatigue_essouffle"> Essoufflé</label><br>
+    <label><input type="checkbox" name="fatigue_fatigue"> Fatigué</label><br>
+    <label><input type="checkbox" name="fatigue_epuise"> Épuisé</label><br>
+    <label><input type="checkbox" name="fatigue_inconscient"> Inconscient</label><br>
+    <label><input type="checkbox" name="fatigue_mort"> Mort</label><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Afflictions</legend>
+    <label><input type="checkbox" name="aff_infection"> Infection</label><br>
+    <label><input type="checkbox" name="aff_maladie"> Maladie</label><br>
+    <label><input type="checkbox" name="aff_surdité"> Surdité</label><br>
+    <label><input type="checkbox" name="aff_aveuglement"> Aveuglement</label><br>
+    <label><input type="checkbox" name="aff_paralysie"> Paralysie</label><br>
+    <label><input type="checkbox" name="aff_nausée"> Nausée</label><br>
+    <label><input type="checkbox" name="aff_mutations"> Mutations</label><br>
+    <label><input type="checkbox" name="aff_concussion"> Concussion</label><br>
+    <label><input type="checkbox" name="aff_assome"> Assommé</label><br>
+    <label><input type="checkbox" name="aff_hemorragie"> Hémorragie</label><br>
+    <label><input type="checkbox" name="aff_mutism"> Mutisme</label><br>
+    <label><input type="checkbox" name="aff_dependance"> Dépendance</label><br>
+    <label><input type="checkbox" name="aff_empoisonnement"> Empoisonnement</label><br>
+    <label><input type="checkbox" name="aff_egratignures"> Égratinures</label><br>
+  </fieldset>
+</section>
+
+<!-- DONS -->
+<section>
+  <h2>Dons</h2>
+  <label for="dons">Dons :</label><br>
+  <textarea id="dons" name="dons" rows="4" cols="80" placeholder="Ex : Tireur d'élite, Médic..."></textarea>
+</section>
+
+<!-- POINTS D'ACTION -->
+<section>
+  <h2>Points d'action</h2>
+  <label><input type="checkbox" name="pa1"> 1</label>
+  <label><input type="checkbox" name="pa2"> 2</label>
+  <label><input type="checkbox" name="pa3"> 3</label>
+  <label><input type="checkbox" name="pa4"> 4</label>
+  <label><input type="checkbox" name="pa5"> 5</label>
+  <label><input type="checkbox" name="pa6"> 6</label>
+  <label><input type="checkbox" name="pa7"> 7</label>
+  <label><input type="checkbox" name="pa8"> 8</label>
+  <label><input type="checkbox" name="pa9"> 9</label>
+  <label><input type="checkbox" name="pa10"> 10</label>
+</section>
+
+<!-- ARMEMENTS: 8 emplacements -->
+<section>
+  <h2>Armements (8 emplacements)</h2>
+
+  <!-- Emplacement 1 -->
+  <fieldset>
+    <legend>Emplacement 1</legend>
+    <label for="e1_partie">Partie du corps :</label>
+    <select id="e1_partie" name="e1_partie">
+      <option value="dos_droite">Dos droite</option>
+      <option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option>
+      <option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option>
+      <option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option>
+      <option value="poche4">Poche 4</option>
+    </select><br>
+
+    <label>Nom de l'arme :</label><input type="text" name="e1_nom"><br>
+    <label>Portée :</label><input type="text" name="e1_portee"><br>
+    <label>Type :</label><input type="text" name="e1_type"><br>
+    <label>Qualités :</label><br><textarea name="e1_qualites" rows="2" cols="60"></textarea><br>
+
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e1_etat1">1</label>
+    <label><input type="checkbox" name="e1_etat2">2</label>
+    <label><input type="checkbox" name="e1_etat3">3</label>
+    <label><input type="checkbox" name="e1_etat4">4</label>
+    <label><input type="checkbox" name="e1_etat5">5</label>
+    <label><input type="checkbox" name="e1_etat6">6</label>
+    <label><input type="checkbox" name="e1_etat7">7</label>
+    <label><input type="checkbox" name="e1_etat8">8</label>
+    <label><input type="checkbox" name="e1_etat9">9</label>
+    <label><input type="checkbox" name="e1_etat10">10</label><br>
+
+    <label>Munitions restantes / total :</label><input type="text" name="e1_munitions" placeholder="Ex : 12 / 30"><br>
+    <label>Calibre :</label><input type="text" name="e1_calibre"><br>
+    <label>Munitions / chargeurs sup :</label><input type="text" name="e1_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e1_degats"><br>
+
+    <label>PA - Simple :</label><input type="number" name="e1_pa_simple" min="0"><br>
+    <label>PA - Rafale :</label><input type="number" name="e1_pa_rafale" min="0"><br>
+    <label>PA - Ciblé :</label><input type="number" name="e1_pa_cible" min="0"><br>
+
+    <label>Mod d'arme 1 :</label><br><textarea name="e1_mod1" rows="2" cols="60"></textarea><br>
+    <label>Mod d'arme 2 :</label><br><textarea name="e1_mod2" rows="2" cols="60"></textarea><br>
+    <label>Mod d'arme 3 :</label><br><textarea name="e1_mod3" rows="2" cols="60"></textarea><br>
+  </fieldset>
+
+  <!-- Emplacements 2 à 8 (dupliquer en incrémentant les indices) -->
+  <fieldset>
+    <legend>Emplacement 2</legend>
+    <label for="e2_partie">Partie du corps :</label>
+    <select id="e2_partie" name="e2_partie">
+      <option value="dos_droite">Dos droite</option>
+      <option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option>
+      <option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option>
+      <option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option>
+      <option value="poche4">Poche 4</option>
+    </select><br>
+    <label>Nom :</label><input type="text" name="e2_nom"><br>
+    <label>Portée :</label><input type="text" name="e2_portee"><br>
+    <label>Type :</label><input type="text" name="e2_type"><br>
+    <label>Qualités :</label><br><textarea name="e2_qualites" rows="2"></textarea><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e2_etat1">1</label><label><input type="checkbox" name="e2_etat2">2</label>
+    <label><input type="checkbox" name="e2_etat3">3</label><label><input type="checkbox" name="e2_etat4">4</label>
+    <label><input type="checkbox" name="e2_etat5">5</label><label><input type="checkbox" name="e2_etat6">6</label>
+    <label><input type="checkbox" name="e2_etat7">7</label><label><input type="checkbox" name="e2_etat8">8</label>
+    <label><input type="checkbox" name="e2_etat9">9</label><label><input type="checkbox" name="e2_etat10">10</label><br>
+    <label>Munitions (restantes/total) :</label><input type="text" name="e2_munitions"><br>
+    <label>Calibre :</label><input type="text" name="e2_calibre"><br>
+    <label>Munitions / chargeurs sup :</label><input type="text" name="e2_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e2_degats"><br>
+    <label>PA Simple :</label><input type="number" name="e2_pa_simple" min="0"><br>
+    <label>PA Rafale :</label><input type="number" name="e2_pa_rafale" min="0"><br>
+    <label>PA Ciblé :</label><input type="number" name="e2_pa_cible" min="0"><br>
+    <label>Mod 1 :</label><br><textarea name="e2_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="e2_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="e2_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Emplacement 3</legend>
+    <label>Partie :</label>
+    <select name="e3_partie">
+      <option value="dos_droite">Dos droite</option><option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option><option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option><option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option><option value="poche4">Poche 4</option>
+    </select><br>
+    <label>Nom :</label><input type="text" name="e3_nom"><br>
+    <label>Portée :</label><input type="text" name="e3_portee"><br>
+    <label>Type :</label><input type="text" name="e3_type"><br>
+    <label>Qualités :</label><br><textarea name="e3_qualites" rows="2"></textarea><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e3_etat1">1</label><label><input type="checkbox" name="e3_etat2">2</label>
+    <label><input type="checkbox" name="e3_etat3">3</label><label><input type="checkbox" name="e3_etat4">4</label>
+    <label><input type="checkbox" name="e3_etat5">5</label><label><input type="checkbox" name="e3_etat6">6</label>
+    <label><input type="checkbox" name="e3_etat7">7</label><label><input type="checkbox" name="e3_etat8">8</label>
+    <label><input type="checkbox" name="e3_etat9">9</label><label><input type="checkbox" name="e3_etat10">10</label><br>
+    <label>Munitions :</label><input type="text" name="e3_munitions"><br>
+    <label>Calibre :</label><input type="text" name="e3_calibre"><br>
+    <label>Munitions/chargeurs sup :</label><input type="text" name="e3_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e3_degats"><br>
+    <label>PA Simple :</label><input type="number" name="e3_pa_simple" min="0"><br>
+    <label>PA Rafale :</label><input type="number" name="e3_pa_rafale" min="0"><br>
+    <label>PA Ciblé :</label><input type="number" name="e3_pa_cible" min="0"><br>
+    <label>Mod 1 :</label><br><textarea name="e3_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="e3_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="e3_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Emplacement 4</legend>
+    <label>Partie :</label>
+    <select name="e4_partie">
+      <option value="dos_droite">Dos droite</option><option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option><option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option><option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option><option value="poche4">Poche 4</option>
+    </select><br>
+    <label>Nom :</label><input type="text" name="e4_nom"><br>
+    <label>Portée :</label><input type="text" name="e4_portee"><br>
+    <label>Type :</label><input type="text" name="e4_type"><br>
+    <label>Qualités :</label><br><textarea name="e4_qualites" rows="2"></textarea><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e4_etat1">1</label><label><input type="checkbox" name="e4_etat2">2</label>
+    <label><input type="checkbox" name="e4_etat3">3</label><label><input type="checkbox" name="e4_etat4">4</label>
+    <label><input type="checkbox" name="e4_etat5">5</label><label><input type="checkbox" name="e4_etat6">6</label>
+    <label><input type="checkbox" name="e4_etat7">7</label><label><input type="checkbox" name="e4_etat8">8</label>
+    <label><input type="checkbox" name="e4_etat9">9</label><label><input type="checkbox" name="e4_etat10">10</label><br>
+    <label>Munitions :</label><input type="text" name="e4_munitions"><br>
+    <label>Calibre :</label><input type="text" name="e4_calibre"><br>
+    <label>Munitions/chargeurs sup :</label><input type="text" name="e4_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e4_degats"><br>
+    <label>PA Simple :</label><input type="number" name="e4_pa_simple" min="0"><br>
+    <label>PA Rafale :</label><input type="number" name="e4_pa_rafale" min="0"><br>
+    <label>PA Ciblé :</label><input type="number" name="e4_pa_cible" min="0"><br>
+    <label>Mod 1 :</label><br><textarea name="e4_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="e4_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="e4_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Emplacement 5</legend>
+    <label>Partie :</label>
+    <select name="e5_partie">
+      <option value="dos_droite">Dos droite</option><option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option><option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option><option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option><option value="poche4">Poche 4</option>
+    </select><br>
+    <label>Nom :</label><input type="text" name="e5_nom"><br>
+    <label>Portée :</label><input type="text" name="e5_portee"><br>
+    <label>Type :</label><input type="text" name="e5_type"><br>
+    <label>Qualités :</label><br><textarea name="e5_qualites" rows="2"></textarea><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e5_etat1">1</label><label><input type="checkbox" name="e5_etat2">2</label>
+    <label><input type="checkbox" name="e5_etat3">3</label><label><input type="checkbox" name="e5_etat4">4</label>
+    <label><input type="checkbox" name="e5_etat5">5</label><label><input type="checkbox" name="e5_etat6">6</label>
+    <label><input type="checkbox" name="e5_etat7">7</label><label><input type="checkbox" name="e5_etat8">8</label>
+    <label><input type="checkbox" name="e5_etat9">9</label><label><input type="checkbox" name="e5_etat10">10</label><br>
+    <label>Munitions :</label><input type="text" name="e5_munitions"><br>
+    <label>Calibre :</label><input type="text" name="e5_calibre"><br>
+    <label>Munitions/chargeurs sup :</label><input type="text" name="e5_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e5_degats"><br>
+    <label>PA Simple :</label><input type="number" name="e5_pa_simple" min="0"><br>
+    <label>PA Rafale :</label><input type="number" name="e5_pa_rafale" min="0"><br>
+    <label>PA Ciblé :</label><input type="number" name="e5_pa_cible" min="0"><br>
+    <label>Mod 1 :</label><br><textarea name="e5_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="e5_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="e5_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Emplacement 6</legend>
+    <label>Partie :</label>
+    <select name="e6_partie">
+      <option value="dos_droite">Dos droite</option><option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option><option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option><option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option><option value="poche4">Poche 4</option>
+    </select><br>
+    <label>Nom :</label><input type="text" name="e6_nom"><br>
+    <label>Portée :</label><input type="text" name="e6_portee"><br>
+    <label>Type :</label><input type="text" name="e6_type"><br>
+    <label>Qualités :</label><br><textarea name="e6_qualites" rows="2"></textarea><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e6_etat1">1</label><label><input type="checkbox" name="e6_etat2">2</label>
+    <label><input type="checkbox" name="e6_etat3">3</label><label><input type="checkbox" name="e6_etat4">4</label>
+    <label><input type="checkbox" name="e6_etat5">5</label><label><input type="checkbox" name="e6_etat6">6</label>
+    <label><input type="checkbox" name="e6_etat7">7</label><label><input type="checkbox" name="e6_etat8">8</label>
+    <label><input type="checkbox" name="e6_etat9">9</label><label><input type="checkbox" name="e6_etat10">10</label><br>
+    <label>Munitions :</label><input type="text" name="e6_munitions"><br>
+    <label>Calibre :</label><input type="text" name="e6_calibre"><br>
+    <label>Munitions/chargeurs sup :</label><input type="text" name="e6_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e6_degats"><br>
+    <label>PA Simple :</label><input type="number" name="e6_pa_simple" min="0"><br>
+    <label>PA Rafale :</label><input type="number" name="e6_pa_rafale" min="0"><br>
+    <label>PA Ciblé :</label><input type="number" name="e6_pa_cible" min="0"><br>
+    <label>Mod 1 :</label><br><textarea name="e6_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="e6_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="e6_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Emplacement 7</legend>
+    <label>Partie :</label>
+    <select name="e7_partie">
+      <option value="dos_droite">Dos droite</option><option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option><option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option><option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option><option value="poche4">Poche 4</option>
+    </select><br>
+    <label>Nom :</label><input type="text" name="e7_nom"><br>
+    <label>Portée :</label><input type="text" name="e7_portee"><br>
+    <label>Type :</label><input type="text" name="e7_type"><br>
+    <label>Qualités :</label><br><textarea name="e7_qualites" rows="2"></textarea><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e7_etat1">1</label><label><input type="checkbox" name="e7_etat2">2</label>
+    <label><input type="checkbox" name="e7_etat3">3</label><label><input type="checkbox" name="e7_etat4">4</label>
+    <label><input type="checkbox" name="e7_etat5">5</label><label><input type="checkbox" name="e7_etat6">6</label>
+    <label><input type="checkbox" name="e7_etat7">7</label><label><input type="checkbox" name="e7_etat8">8</label>
+    <label><input type="checkbox" name="e7_etat9">9</label><label><input type="checkbox" name="e7_etat10">10</label><br>
+    <label>Munitions :</label><input type="text" name="e7_munitions"><br>
+    <label>Calibre :</label><input type="text" name="e7_calibre"><br>
+    <label>Munitions/chargeurs sup :</label><input type="text" name="e7_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e7_degats"><br>
+    <label>PA Simple :</label><input type="number" name="e7_pa_simple" min="0"><br>
+    <label>PA Rafale :</label><input type="number" name="e7_pa_rafale" min="0"><br>
+    <label>PA Ciblé :</label><input type="number" name="e7_pa_cible" min="0"><br>
+    <label>Mod 1 :</label><br><textarea name="e7_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="e7_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="e7_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Emplacement 8</legend>
+    <label>Partie :</label>
+    <select name="e8_partie">
+      <option value="dos_droite">Dos droite</option><option value="dos_gauche">Dos gauche</option>
+      <option value="holster_droit">Holster droit</option><option value="holster_gauche">Holster gauche</option>
+      <option value="poche1">Poche 1</option><option value="poche2">Poche 2</option>
+      <option value="poche3">Poche 3</option><option value="poche4">Poche 4</option>
+    </select><br>
+    <label>Nom :</label><input type="text" name="e8_nom"><br>
+    <label>Portée :</label><input type="text" name="e8_portee"><br>
+    <label>Type :</label><input type="text" name="e8_type"><br>
+    <label>Qualités :</label><br><textarea name="e8_qualites" rows="2"></textarea><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="e8_etat1">1</label><label><input type="checkbox" name="e8_etat2">2</label>
+    <label><input type="checkbox" name="e8_etat3">3</label><label><input type="checkbox" name="e8_etat4">4</label>
+    <label><input type="checkbox" name="e8_etat5">5</label><label><input type="checkbox" name="e8_etat6">6</label>
+    <label><input type="checkbox" name="e8_etat7">7</label><label><input type="checkbox" name="e8_etat8">8</label>
+    <label><input type="checkbox" name="e8_etat9">9</label><label><input type="checkbox" name="e8_etat10">10</label><br>
+    <label>Munitions :</label><input type="text" name="e8_munitions"><br>
+    <label>Calibre :</label><input type="text" name="e8_calibre"><br>
+    <label>Munitions/chargeurs sup :</label><input type="text" name="e8_munitions_chargeurs"><br>
+    <label>Dégâts :</label><input type="text" name="e8_degats"><br>
+    <label>PA Simple :</label><input type="number" name="e8_pa_simple" min="0"><br>
+    <label>PA Rafale :</label><input type="number" name="e8_pa_rafale" min="0"><br>
+    <label>PA Ciblé :</label><input type="number" name="e8_pa_cible" min="0"><br>
+    <label>Mod 1 :</label><br><textarea name="e8_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="e8_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="e8_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+</section>
+
+<!-- LOCALISATION DES DÉGÂTS -->
+<section>
+  <h2>Localisation des dégâts</h2>
+  <table>
+    <thead><tr><th>Zone</th><th>Actuel</th><th>Max</th></tr></thead>
+    <tbody>
+      <tr><td>Tête</td><td><input type="number" name="loc_tete_actuel" min="0"></td><td>15</td></tr>
+      <tr><td>Torse droit</td><td><input type="number" name="loc_torse_d_actuel" min="0"></td><td>30</td></tr>
+      <tr><td>Torse gauche</td><td><input type="number" name="loc_torse_g_actuel" min="0"></td><td>30</td></tr>
+      <tr><td>Bras droit</td><td><input type="number" name="loc_bras_d_actuel" min="0"></td><td>20</td></tr>
+      <tr><td>Bras gauche</td><td><input type="number" name="loc_bras_g_actuel" min="0"></td><td>20</td></tr>
+      <tr><td>Jambe droite</td><td><input type="number" name="loc_jambe_d_actuel" min="0"></td><td>20</td></tr>
+      <tr><td>Jambe gauche</td><td><input type="number" name="loc_jambe_g_actuel" min="0"></td><td>20</td></tr>
+      <tr><td>Aine</td><td><input type="number" name="loc_aine_actuel" min="0"></td><td>10</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- PROTECTIONS -->
+<section>
+  <h2>Protection (par zone)</h2>
+
+  <!-- Tête -->
+  <fieldset>
+    <legend>Tête</legend>
+    <label>Nom :</label><input type="text" name="prot_tete_nom"><br>
+    <label>Bonus de CA :</label><input type="number" name="prot_tete_bonus_ca"><br>
+    <label>Seuil :</label><input type="number" name="prot_tete_seuil"><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="prot_tete_etat1">1</label><label><input type="checkbox" name="prot_tete_etat2">2</label>
+    <label><input type="checkbox" name="prot_tete_etat3">3</label><label><input type="checkbox" name="prot_tete_etat4">4</label>
+    <label><input type="checkbox" name="prot_tete_etat5">5</label><label><input type="checkbox" name="prot_tete_etat6">6</label>
+    <label><input type="checkbox" name="prot_tete_etat7">7</label><label><input type="checkbox" name="prot_tete_etat8">8</label>
+    <label><input type="checkbox" name="prot_tete_etat9">9</label><label><input type="checkbox" name="prot_tete_etat10">10</label><br>
+
+    <label>Résistance - Dégâts normaux :</label><input type="number" name="prot_tete_res_normale"><br>
+    <label>Résistance - Laser :</label><input type="number" name="prot_tete_res_laser"><br>
+    <label>Résistance - Feu / explosions :</label><input type="number" name="prot_tete_res_feu"><br>
+    <label>Résistance - Plasma :</label><input type="number" name="prot_tete_res_plasma"><br>
+    <label>Résistance - Radiations :</label><input type="number" name="prot_tete_res_rads"><br>
+
+    <label>Effet 1 :</label><br><textarea name="prot_tete_effet1" rows="2" cols="60"></textarea><br>
+    <label>Effet 2 :</label><br><textarea name="prot_tete_effet2" rows="2" cols="60"></textarea><br>
+    <label>Effet 3 :</label><br><textarea name="prot_tete_effet3" rows="2" cols="60"></textarea><br>
+
+    <label>Mod 1 :</label><br><textarea name="prot_tete_mod1" rows="2" cols="60"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="prot_tete_mod2" rows="2" cols="60"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="prot_tete_mod3" rows="2" cols="60"></textarea><br>
+  </fieldset>
+
+  <!-- Torse -->
+  <fieldset>
+    <legend>Torse</legend>
+    <label>Nom :</label><input type="text" name="prot_torse_nom"><br>
+    <label>Bonus de CA :</label><input type="number" name="prot_torse_bonus_ca"><br>
+    <label>Seuil :</label><input type="number" name="prot_torse_seuil"><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="prot_torse_etat1">1</label><label><input type="checkbox" name="prot_torse_etat2">2</label>
+    <label><input type="checkbox" name="prot_torse_etat3">3</label><label><input type="checkbox" name="prot_torse_etat4">4</label>
+    <label><input type="checkbox" name="prot_torse_etat5">5</label><label><input type="checkbox" name="prot_torse_etat6">6</label>
+    <label><input type="checkbox" name="prot_torse_etat7">7</label><label><input type="checkbox" name="prot_torse_etat8">8</label>
+    <label><input type="checkbox" name="prot_torse_etat9">9</label><label><input type="checkbox" name="prot_torse_etat10">10</label><br>
+
+    <label>Résistance - Dégâts normaux :</label><input type="number" name="prot_torse_res_normale"><br>
+    <label>Résistance - Laser :</label><input type="number" name="prot_torse_res_laser"><br>
+    <label>Résistance - Feu / explosions :</label><input type="number" name="prot_torse_res_feu"><br>
+    <label>Résistance - Plasma :</label><input type="number" name="prot_torse_res_plasma"><br>
+    <label>Résistance - Radiations :</label><input type="number" name="prot_torse_res_rads"><br>
+
+    <label>Effet 1 :</label><br><textarea name="prot_torse_effet1" rows="2"></textarea><br>
+    <label>Effet 2 :</label><br><textarea name="prot_torse_effet2" rows="2"></textarea><br>
+    <label>Effet 3 :</label><br><textarea name="prot_torse_effet3" rows="2"></textarea><br>
+
+    <label>Mod 1 :</label><br><textarea name="prot_torse_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="prot_torse_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="prot_torse_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <!-- Bras gauche -->
+  <fieldset>
+    <legend>Bras gauche</legend>
+    <label>Nom :</label><input type="text" name="prot_bras_g_nom"><br>
+    <label>Bonus de CA :</label><input type="number" name="prot_bras_g_bonus_ca"><br>
+    <label>Seuil :</label><input type="number" name="prot_bras_g_seuil"><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="prot_bras_g_etat1">1</label><label><input type="checkbox" name="prot_bras_g_etat2">2</label>
+    <label><input type="checkbox" name="prot_bras_g_etat3">3</label><label><input type="checkbox" name="prot_bras_g_etat4">4</label>
+    <label><input type="checkbox" name="prot_bras_g_etat5">5</label><label><input type="checkbox" name="prot_bras_g_etat6">6</label>
+    <label><input type="checkbox" name="prot_bras_g_etat7">7</label><label><input type="checkbox" name="prot_bras_g_etat8">8</label>
+    <label><input type="checkbox" name="prot_bras_g_etat9">9</label><label><input type="checkbox" name="prot_bras_g_etat10">10</label><br>
+
+    <label>Résistance - Dégâts normaux :</label><input type="number" name="prot_bras_g_res_normale"><br>
+    <label>Résistance - Laser :</label><input type="number" name="prot_bras_g_res_laser"><br>
+    <label>Résistance - Feu / explosions :</label><input type="number" name="prot_bras_g_res_feu"><br>
+    <label>Résistance - Plasma :</label><input type="number" name="prot_bras_g_res_plasma"><br>
+    <label>Résistance - Radiations :</label><input type="number" name="prot_bras_g_res_rads"><br>
+
+    <label>Effet 1 :</label><br><textarea name="prot_bras_g_effet1" rows="2"></textarea><br>
+    <label>Effet 2 :</label><br><textarea name="prot_bras_g_effet2" rows="2"></textarea><br>
+    <label>Effet 3 :</label><br><textarea name="prot_bras_g_effet3" rows="2"></textarea><br>
+
+    <label>Mod 1 :</label><br><textarea name="prot_bras_g_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="prot_bras_g_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="prot_bras_g_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <!-- Bras droit -->
+  <fieldset>
+    <legend>Bras droit</legend>
+    <label>Nom :</label><input type="text" name="prot_bras_d_nom"><br>
+    <label>Bonus de CA :</label><input type="number" name="prot_bras_d_bonus_ca"><br>
+    <label>Seuil :</label><input type="number" name="prot_bras_d_seuil"><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="prot_bras_d_etat1">1</label><label><input type="checkbox" name="prot_bras_d_etat2">2</label>
+    <label><input type="checkbox" name="prot_bras_d_etat3">3</label><label><input type="checkbox" name="prot_bras_d_etat4">4</label>
+    <label><input type="checkbox" name="prot_bras_d_etat5">5</label><label><input type="checkbox" name="prot_bras_d_etat6">6</label>
+    <label><input type="checkbox" name="prot_bras_d_etat7">7</label><label><input type="checkbox" name="prot_bras_d_etat8">8</label>
+    <label><input type="checkbox" name="prot_bras_d_etat9">9</label><label><input type="checkbox" name="prot_bras_d_etat10">10</label><br>
+
+    <label>Résistance - Dégâts normaux :</label><input type="number" name="prot_bras_d_res_normale"><br>
+    <label>Résistance - Laser :</label><input type="number" name="prot_bras_d_res_laser"><br>
+    <label>Résistance - Feu / explosions :</label><input type="number" name="prot_bras_d_res_feu"><br>
+    <label>Résistance - Plasma :</label><input type="number" name="prot_bras_d_res_plasma"><br>
+    <label>Résistance - Radiations :</label><input type="number" name="prot_bras_d_res_rads"><br>
+
+    <label>Effet 1 :</label><br><textarea name="prot_bras_d_effet1" rows="2"></textarea><br>
+    <label>Effet 2 :</label><br><textarea name="prot_bras_d_effet2" rows="2"></textarea><br>
+    <label>Effet 3 :</label><br><textarea name="prot_bras_d_effet3" rows="2"></textarea><br>
+
+    <label>Mod 1 :</label><br><textarea name="prot_bras_d_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="prot_bras_d_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="prot_bras_d_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <!-- Jambe gauche -->
+  <fieldset>
+    <legend>Jambe gauche</legend>
+    <label>Nom :</label><input type="text" name="prot_jambe_g_nom"><br>
+    <label>Bonus de CA :</label><input type="number" name="prot_jambe_g_bonus_ca"><br>
+    <label>Seuil :</label><input type="number" name="prot_jambe_g_seuil"><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="prot_jambe_g_etat1">1</label><label><input type="checkbox" name="prot_jambe_g_etat2">2</label>
+    <label><input type="checkbox" name="prot_jambe_g_etat3">3</label><label><input type="checkbox" name="prot_jambe_g_etat4">4</label>
+    <label><input type="checkbox" name="prot_jambe_g_etat5">5</label><label><input type="checkbox" name="prot_jambe_g_etat6">6</label>
+    <label><input type="checkbox" name="prot_jambe_g_etat7">7</label><label><input type="checkbox" name="prot_jambe_g_etat8">8</label>
+    <label><input type="checkbox" name="prot_jambe_g_etat9">9</label><label><input type="checkbox" name="prot_jambe_g_etat10">10</label><br>
+
+    <label>Résistance - Dégâts normaux :</label><input type="number" name="prot_jambe_g_res_normale"><br>
+    <label>Résistance - Laser :</label><input type="number" name="prot_jambe_g_res_laser"><br>
+    <label>Résistance - Feu / explosions :</label><input type="number" name="prot_jambe_g_res_feu"><br>
+    <label>Résistance - Plasma :</label><input type="number" name="prot_jambe_g_res_plasma"><br>
+    <label>Résistance - Radiations :</label><input type="number" name="prot_jambe_g_res_rads"><br>
+
+    <label>Effet 1 :</label><br><textarea name="prot_jambe_g_effet1" rows="2"></textarea><br>
+    <label>Effet 2 :</label><br><textarea name="prot_jambe_g_effet2" rows="2"></textarea><br>
+    <label>Effet 3 :</label><br><textarea name="prot_jambe_g_effet3" rows="2"></textarea><br>
+
+    <label>Mod 1 :</label><br><textarea name="prot_jambe_g_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="prot_jambe_g_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="prot_jambe_g_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+  <!-- Jambe droite -->
+  <fieldset>
+    <legend>Jambe droite</legend>
+    <label>Nom :</label><input type="text" name="prot_jambe_d_nom"><br>
+    <label>Bonus de CA :</label><input type="number" name="prot_jambe_d_bonus_ca"><br>
+    <label>Seuil :</label><input type="number" name="prot_jambe_d_seuil"><br>
+    <label>État (10 cases) :</label><br>
+    <label><input type="checkbox" name="prot_jambe_d_etat1">1</label><label><input type="checkbox" name="prot_jambe_d_etat2">2</label>
+    <label><input type="checkbox" name="prot_jambe_d_etat3">3</label><label><input type="checkbox" name="prot_jambe_d_etat4">4</label>
+    <label><input type="checkbox" name="prot_jambe_d_etat5">5</label><label><input type="checkbox" name="prot_jambe_d_etat6">6</label>
+    <label><input type="checkbox" name="prot_jambe_d_etat7">7</label><label><input type="checkbox" name="prot_jambe_d_etat8">8</label>
+    <label><input type="checkbox" name="prot_jambe_d_etat9">9</label><label><input type="checkbox" name="prot_jambe_d_etat10">10</label><br>
+
+    <label>Résistance - Dégâts normaux :</label><input type="number" name="prot_jambe_d_res_normale"><br>
+    <label>Résistance - Laser :</label><input type="number" name="prot_jambe_d_res_laser"><br>
+    <label>Résistance - Feu / explosions :</label><input type="number" name="prot_jambe_d_res_feu"><br>
+    <label>Résistance - Plasma :</label><input type="number" name="prot_jambe_d_res_plasma"><br>
+    <label>Résistance - Radiations :</label><input type="number" name="prot_jambe_d_res_rads"><br>
+
+    <label>Effet 1 :</label><br><textarea name="prot_jambe_d_effet1" rows="2"></textarea><br>
+    <label>Effet 2 :</label><br><textarea name="prot_jambe_d_effet2" rows="2"></textarea><br>
+    <label>Effet 3 :</label><br><textarea name="prot_jambe_d_effet3" rows="2"></textarea><br>
+
+    <label>Mod 1 :</label><br><textarea name="prot_jambe_d_mod1" rows="2"></textarea><br>
+    <label>Mod 2 :</label><br><textarea name="prot_jambe_d_mod2" rows="2"></textarea><br>
+    <label>Mod 3 :</label><br><textarea name="prot_jambe_d_mod3" rows="2"></textarea><br>
+  </fieldset>
+
+</section>
+
+<!-- EQUIPEMENT -->
+<section>
+  <h2>Équipement</h2>
+  <label>Place actuelle :</label><input type="number" name="equip_place_actuelle" min="0">
+  <label>Place max :</label><input type="number" name="equip_place_max" min="0"><br>
+
+  <label>Poids actuel :</label><input type="number" name="equip_poids_actuel" min="0">
+  <label>Poids max :</label><input type="number" name="equip_poids_max" min="0"><br>
+
+  <table>
+    <thead><tr><th>Objet</th><th>Place prise</th><th>Poids</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><textarea name="equip_nom1" rows="1" cols="40"></textarea></td>
+        <td><input type="number" name="equip_place1" min="0"></td>
+        <td><input type="number" name="equip_poids1" min="0"></td>
+      </tr>
+      <tr>
+        <td><textarea name="equip_nom2" rows="1" cols="40"></textarea></td>
+        <td><input type="number" name="equip_place2" min="0"></td>
+        <td><input type="number" name="equip_poids2" min="0"></td>
+      </tr>
+      <tr>
+        <td><textarea name="equip_nom3" rows="1" cols="40"></textarea></td>
+        <td><input type="number" name="equip_place3" min="0"></td>
+        <td><input type="number" name="equip_poids3" min="0"></td>
+      </tr>
+      <tr>
+        <td><textarea name="equip_nom4" rows="1" cols="40"></textarea></td>
+        <td><input type="number" name="equip_place4" min="0"></td>
+        <td><input type="number" name="equip_poids4" min="0"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- CONSOMMABLES -->
+<section>
+  <h2>Consommables</h2>
+  <table>
+    <thead><tr><th>Nom</th><th>Quantité</th><th>Poids</th></tr></thead>
+    <tbody>
+      <tr><td><textarea name="cons_nom1" rows="1"></textarea></td><td><input type="number" name="cons_qte1" min="0"></td><td><input type="number" name="cons_poids1" min="0"></td></tr>
+      <tr><td><textarea name="cons_nom2" rows="1"></textarea></td><td><input type="number" name="cons_qte2" min="0"></td><td><input type="number" name="cons_poids2" min="0"></td></tr>
+      <tr><td><textarea name="cons_nom3" rows="1"></textarea></td><td><input type="number" name="cons_qte3" min="0"></td><td><input type="number" name="cons_poids3" min="0"></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- RICHESSES -->
+<section>
+  <h2>Richesses</h2>
+  <label for="capsules">Capsules :</label><input type="number" id="capsules" name="capsules" min="0"><br>
+  <label for="autres_monnaies">Autres monnaies :</label><input type="text" id="autres_monnaies" name="autres_monnaies"><br>
+  <label for="dollars_confrerie">Dollars de la Confrérie :</label><input type="number" id="dollars_confrerie" name="dollars_confrerie" min="0"><br>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <script defer src="/Common/JS/script.js"></script>
+  <title>Feuille de véhicule — Mass Effect</title>
+</head>
+<body>
+  <header>
+    <h1>Feuille de véhicule — Mass Effect</h1>
+  </header>
+
+  <main>
+    <form id="ship-form" method="post">
+
+      <!-- Identification -->
+      <fieldset>
+        <legend>Identification</legend>
+        <label for="shipName">Nom du vaisseau :</label><br>
+        <input type="text" id="shipName" name="shipName" placeholder="Ex : Normandy SR-2"><br><br>
+
+        <!-- Illustration du vaisseau -->
+        <!-- <label for="shipPic">Illustration :</label><br>
+        <input type="text" id="shipPic" name="shipPic" placeholder="/Universes/ME/img/nom.jpg"><br>
+        <img id="shipPicPreview" src="" alt="Illustration du vaisseau" width="300" height="150"><br><br> -->
+      </fieldset>
+
+      <!-- Structure -->
+      <fieldset>
+        <legend>Structure</legend>
+        <label for="hullMax">Coque max :</label><br>
+        <input type="number" id="hullMax" name="hullMax"><br>
+
+        <label for="hullTempMax">Surchauffe max coque :</label><br>
+        <input type="number" id="hullTempMax" name="hullTempMax"><br>
+
+        <!-- Slider de chauffe coque -->
+        <label for="hullTemp">Température actuelle coque :</label><br>
+        <input type="range" id="hullTemp" name="hullTemp" min="0" max="100" value="0"><br><br>
+
+        <label for="armorMax">Blindage max :</label><br>
+        <input type="number" id="armorMax" name="armorMax"><br>
+      </fieldset>
+
+      <!-- Bouclier -->
+      <fieldset>
+        <legend>Shield</legend>
+        <label for="shieldName">Nom du bouclier :</label><br>
+        <input type="text" id="shieldName" name="shieldName"><br>
+
+        <label for="shieldMax">Bouclier max :</label><br>
+        <input type="number" id="shieldMax" name="shieldMax"><br>
+
+        <label for="shieldTempMax">Surchauffe max bouclier :</label><br>
+        <input type="number" id="shieldTempMax" name="shieldTempMax"><br>
+
+        <!-- Slider de chauffe bouclier -->
+        <label for="shieldTemp">Température actuelle bouclier :</label><br>
+        <input type="range" id="shieldTemp" name="shieldTemp" min="0" max="100" value="0"><br><br>
+
+        <label for="Regen">Régénération :</label><br>
+        <input type="number" id="Regen" name="Regen"><br>
+
+        <label for="SecuritShield">Sécurité :</label><br>
+        <input type="number" id="SecuritShield" name="SecuritShield"><br>
+
+        <label for="ComplexityShield">Complexité :</label><br>
+        <input type="number" id="ComplexityShield" name="ComplexityShield"><br>
+      </fieldset>
+
+      <!-- Propulsion -->
+      <fieldset>
+        <legend>Propulsion</legend>
+        <label for="driveName">Nom du moteur :</label><br>
+        <input type="text" id="driveName" name="driveName"><br>
+
+        <label for="drivePower">Puissance :</label><br>
+        <input type="number" id="drivePower" name="drivePower"><br>
+
+        <label for="driveTempMax">Surchauffe max moteur :</label><br>
+        <input type="number" id="driveTempMax" name="driveTempMax"><br>
+
+        <!-- Slider de chauffe moteur -->
+        <label for="driveTemp">Température actuelle moteur :</label><br>
+        <input type="range" id="driveTemp" name="driveTemp" min="0" max="100" value="0"><br><br>
+
+        <label for="SecuritDrive">Sécurité :</label><br>
+        <input type="number" id="SecuritDrive" name="SecuritDrive"><br>
+
+        <label for="ComplexityDrive">Complexité :</label><br>
+        <input type="number" id="ComplexityDrive" name="ComplexityDrive"><br>
+      </fieldset>
+
+      <!-- Réacteur -->
+      <fieldset>
+        <legend>Réacteur</legend>
+        <label for="reactorName">Nom :</label><br>
+        <input type="text" id="reactorName" name="reactorName"><br>
+
+        <label for="jumpRange">Portée (saut) :</label><br>
+        <input type="number" id="jumpRange" name="jumpRange"><br>
+
+        <label for="fuelMax">Carburant max :</label><br>
+        <input type="number" id="fuelMax" name="fuelMax"><br>
+
+        <label for="reactorTYPE">Type :</label><br>
+        <input type="text" id="reactorTYPE" name="reactorTYPE"><br>
+
+        <label for="reactorTempMax">Surchauffe max réacteur :</label><br>
+        <input type="number" id="reactorTempMax" name="reactorTempMax"><br>
+
+        <!-- Slider de chauffe réacteur -->
+        <label for="reactorTemp">Température actuelle réacteur :</label><br>
+        <input type="range" id="reactorTemp" name="reactorTemp" min="0" max="100" value="0"><br><br>
+
+        <label for="SecuritReactor">Sécurité :</label><br>
+        <input type="number" id="SecuritReactor" name="SecuritReactor"><br>
+
+        <label for="ComplexityReactor">Complexité :</label><br>
+        <input type="number" id="ComplexityReactor" name="ComplexityReactor"><br>
+      </fieldset>
+
+      <!-- Scanner -->
+      <fieldset>
+        <legend>Scanner</legend>
+        <label for="scannerName">Nom :</label><br>
+        <input type="text" id="scannerName" name="scannerName"><br>
+
+        <label for="scanRange">Portée :</label><br>
+        <input type="number" id="scanRange" name="scanRange"><br>
+
+        <label for="SecuritScanner">Sécurité :</label><br>
+        <input type="number" id="SecuritScanner" name="SecuritScanner"><br>
+
+        <label for="ComplexityScanner">Complexité :</label><br>
+        <input type="number" id="ComplexityScanner" name="ComplexityScanner"><br>
+
+        <label for="Directions">Directions :</label><br>
+        <input type="text" id="Directions" name="Directions"><br>
+      </fieldset>
+
+      <!-- Furtivité -->
+      <fieldset>
+        <legend>Furtivité</legend>
+        <label for="FurtivityName">Nom :</label><br>
+        <input type="text" id="FurtivityName" name="FurtivityName"><br>
+
+        <label for="SecuritFurtivity">Sécurité :</label><br>
+        <input type="number" id="SecuritFurtivity" name="SecuritFurtivity"><br>
+
+        <label for="ComplexityFurtivity">Complexité :</label><br>
+        <input type="number" id="ComplexityFurtivity" name="ComplexityFurtivity"><br>
+
+        <label for="Modif">Modificateur :</label><br>
+        <input type="number" id="Modif" name="Modif"><br>
+      </fieldset>
+
+      <!-- IA -->
+      <fieldset>
+        <legend>IA</legend>
+        <label for="iaName">Nom :</label><br>
+        <input type="text" id="iaName" name="iaName"><br>
+
+        <label for="XP">XP :</label><br>
+        <input type="number" id="XP" name="XP"><br>
+      </fieldset>
+
+      <!-- Équipage -->
+      <fieldset>
+        <legend>Équipage</legend>
+        <label for="crewmax">Équipage max :</label><br>
+        <input type="number" id="crewmax" name="crewmax"><br>
+
+        <label for="crewList">Liste équipage (JSON) :</label><br>
+        <textarea id="crewList" name="crewList" rows="4" cols="50"></textarea><br>
+      </fieldset>
+
+      <!-- Modules -->
+      <fieldset>
+        <legend>Modules</legend>
+        <label for="modulesBase">Modules (JSON) :</label><br>
+        <textarea id="modulesBase" name="modulesBase" rows="4" cols="50"></textarea><br>
+      </fieldset>
+
+      <!-- Réserves -->
+      <fieldset>
+        <legend>Réserves</legend>
+        <label for="reservesBase">Réserves (JSON) :</label><br>
+        <textarea id="reservesBase" name="reservesBase" rows="4" cols="50"></textarea><br>
+      </fieldset>
+
+      <!-- Armements -->
+      <fieldset>
+        <legend>Armements</legend>
+        <label for="ArmementsBase">Armements (JSON) :</label><br>
+        <textarea id="ArmementsBase" name="ArmementsBase" rows="4" cols="50"></textarea><br>
+      </fieldset>
+
+      <!-- Notes -->
+      <fieldset>
+        <legend>Notes</legend>
+        <textarea id="Notes" name="Notes" rows="5" cols="60"></textarea><br>
+      </fieldset>
+
+      <p>
+        <button type="submit">Enregistrer</button>
+        <button type="reset">Réinitialiser</button>
+      </p>
+
+    </form>
+  </main>
+</body>
+</html>

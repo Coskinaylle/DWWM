@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/Universes/SW/CSS/SWstyle.css">
+    <title>Suivi Vaisseau – Star Wars</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"
+        ><img id="logo" src="/Universes/SW/img/Star_Wars_Logo.png" alt=""/></a>
+
+      <h1 id="titre"></h1>
+              <img src="/Universes/ME/icons/MEmenu-burger.svg" id="btnburger" alt="" />
+
+
+      <nav id="menuburger">
+        <a href="/Universes/SW/SW_Main.html" class="menu-link" alt="">Accueil</a>
+        <a href="/Universes/SW/SW_Data.html" class="menu-link">Data</a>
+        <a href="/Universes/SW/SW_Link.php" class="menu-link">Commlink</a>
+        <a href="/Universes/SW/SW_Timeline.html" class="menu-link">Timeline</a>
+        <a href="/Universes/SW/SW_Groupe.html" class="menu-link selected">Groupe</a>
+        <a href="/api/user.php" class="menu-link">Compte</a>
+        </nav>
+
+   </header>
+
+
+
+    <div class="container">
+      <div>
+      <h1>Venator Class Star Destroyer</h1>
+<img src="/Universes/SW/img/venator.webp" alt="">
+</div>
+
+        <div class="card">
+        <h2 class="card-title">Position actuelle</h2>
+        <div class="status">
+          <span><strong>Secteur :</strong> </span>
+          <span><strong>Système :</strong> </span>
+          <span><strong>Planète :</strong> </span>
+        </div>
+      </div>
+
+      <!-- Systèmes -->
+      <div class="card">
+        <h2 class="card-title">Systèmes</h2>
+        <div class="status">
+          <span><strong>Boucliers :</strong> <span class="online">Stables</span></span>
+          <span><strong>Hyperpropulsion :</strong> <span class="online">Opérationnelle</span></span>
+          <span><strong>Armes :</strong> <span class="neutral">Sécurité passive</span></span>
+          <span><strong>I.A. de bord :</strong> <span class="online">Active</span></span>
+          <span><strong>Systèmes vitaux :</strong> <span class="online">Nominal</span></span>
+        </div>
+      </div>
+
+      <!-- Équipage -->
+      <div class="card">
+        <h2 class="card-title">Équipage</h2>
+        <div class="status">
+          <span><strong>Effectif total :</strong> 30</span>
+          <span><strong>Capitaine :</strong> Joueur 1</span>
+          <span><strong>Officier tactique :</strong> Joueur 2</span>
+          <span><strong>Officier :</strong> Joueur 3</span>
+          <span><strong>Sous-officier:</strong> Joueur 4 </span>
+          <span><strong>Statut :</strong> <span class="online">Tous à bord</span></span>
+        </div>
+      </div>
+
+      <!-- Missions -->
+      <div class="card">
+        <h2 class="card-title">Missions en cours</h2>
+        <div class="status">
+          <span><strong>Mission principale :</strong> Transport diplomatique</span>
+          <span><strong>Mission secondaire :</strong> Transfert de données secrètes</span>
+          <span><strong>Objectif suivant :</strong> Ralliement Rebel</span>
+        </div>
+      </div>
+
+      <!-- Inventaire -->
+      <div class="card">
+        <h2 class="card-title">Inventaire</h2>
+        <div class="status">
+          <span><strong>Coaxium :</strong> 12 unités</span>
+          <span><strong>Pièces détachées :</strong> 42 caisses</span>
+          <span><strong>Rations :</strong> 80 packs</span>
+          <span><strong>Munition turbolaser :</strong> 240 charges</span>
+        </div>
+      </div>
+
+      <!-- Statuts techniques -->
+      <div class="card">
+        <h2 class="card-title">Suivi des Systèmes</h2>
+        <div class="status">
+          <span><strong>Réacteur principal :</strong> <span class="online">Nominal</span></span>
+          <span><strong>Hyperdrive :</strong> <span class="online">Chargé</span></span>
+          <span><strong>Capteurs longue portée :</strong> <span class="online">Actifs</span></span>
+          <span><strong>Brouillage :</strong> <span class="neutral">En veille</span></span>
+          <span><strong>Système de survie :</strong> <span class="online">Optimal</span></span>
+          <span><strong>Sécurité interne :</strong> <span class="online">Fonctionnelle</span></span>
+          <span><strong>Holocom :</strong> <span class="offline">Inactif</span></span>
+        </div>
+      </div>
+
+      <!-- Energie / Chaleur -->
+      <div class="card">
+        <h2 class="card-title">Niveaux Énergétiques</h2>
+        <div class="status">
+
+          <label for="energie">Énergie du vaisseau</label>
+          <div class="bar-container">
+            <div class="bar" style="width: 72%">72%</div>
+          </div>
+
+          <label for="chaleur">Échauffement des systèmes</label>
+          <div class="bar-container">
+            <div class="bar" style="width: 34%">34%</div>
+          </div>
+
+        </div>
+      </div>
+
+<div class="card">
+  <h2 class="card-title">Cargo</h2>
+  <div class="status">
+  <span class="neutral">Vide</span>
+</div>
+</div>
+
+<div class="card">
+  <h2 class="card-title">Modules</h2>
+  <div class="status">
+    <span><strong>Infirmerie</strong><span class="offline">Détruit</span>
+  </div>
+</div>
+
+
+    </div>
+
+      <aside>
+    <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+          <path class="pipboy" d="M20 4 L6 16 L20 28" />
+          <path class="pipboy" d="M20 8 H58 V24 H20" />
+        </svg>
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+  </aside>
+  </body>
+</html>

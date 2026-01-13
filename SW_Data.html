@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" lang="fr" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Universes/SW/CSS/SWstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+    <title>Data</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"
+        ><img id="logo" src="/Universes/SW/img/Star_Wars_Logo.png" alt=""
+      /></a>
+
+      <h1 id="titre"></h1>
+      <img src="/Universes/ME/icons/MEmenu-burger.svg" id="btnburger" alt="" />
+
+      <nav id="menuburger">
+        <a href="/Universes/SW/SW_Main.html" class="menu-link" alt=""
+          >Accueil</a
+        >
+        <a href="/Universes/SW/SW_Data.html" class="menu-link selected">Data</a>
+        <a href="/Universes/SW/SW_Link.php" class="menu-link">Commlink</a>
+        <a href="/Universes/SW/SW_Timeline.html" class="menu-link">Timeline</a>
+        <a href="/Universes/SW/SW_Groupe.html" class="menu-link">Groupe</a>
+        <a href="/api/user.php" class="menu-link">Compte</a>
+      </nav>
+    </header>
+
+    <main id="data">
+      <section id="list">
+        <ul>
+          <li>
+            <img src="/Universes/SW/icons/characters.svg" alt="" />Personnages
+          </li>
+          <li>
+            <img src="/Universes/SW/icons/starships.svg" alt="" />Technologie
+          </li>
+          <li>
+            <img
+              style="position: relative; right: 0.8rem"
+              src="/Universes/SW/icons/species.svg"
+              alt=""
+            />Espèces
+          </li>
+          <li>
+            <img src="/Universes/SW/icons/vehicles.svg" alt="" />Véhicules
+          </li>
+          <li><img src="/Universes/SW/icons/planets.svg" alt="" />Planètes</li>
+        </ul>
+      </section>
+      <!-- <section id="illu">
+<img src="/Universes/SW/img/Coruscant-EotE.jpg" alt="">
+<img src="/Universes/SW/img/species.webp" alt="">
+<img src="/Universes/SW/img/tech.jpg" alt="">
+<img src="/Universes/SW/img/vader.jpg" alt="">
+<img src="/Universes/SW/img/venator.webp" alt="">
+    </section> -->
+
+      <!-- menu latéral -->
+      <div id="game_menu">
+        <button id="toggle_button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 32"
+            width="64"
+            height="32"
+          >
+            <rect x="0" y="0" width="64" height="32" fill="#1c2330" />
+            <path
+              d="M6 16 L20 4 L20 28 Z"
+              stroke="#00bfff"
+              stroke-width="3"
+              fill="#00bfff"
+            />
+            <rect x="20" y="10" width="40" height="12" fill="#00bfff" />
+            <line
+              x1="28"
+              y1="12"
+              x2="48"
+              y2="12"
+              stroke="#ffffff"
+              stroke-width="1"
+            />
+            <line
+              x1="28"
+              y1="20"
+              x2="48"
+              y2="20"
+              stroke="#ffffff"
+              stroke-width="1"
+            />
+          </svg>
+        </button>
+        <div id="menu">
+          <p>Jet de dés</p>
+          <button>D2</button>
+          <button>D4</button>
+          <button>D6</button>
+          <button>D8</button>
+          <button>D10</button>
+          <button>D12</button>
+          <button>D20</button>
+          <button>D100</button>
+          <p id="result"></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

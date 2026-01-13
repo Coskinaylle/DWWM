@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" lang="fr" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Universes/FO/CSS/FOstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+    <title>Accueil</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"
+        ><img id="main" src="/Universes/FO/img/FalloutLogo.png" alt=""
+      /></a>
+      <h1 id="titre"></h1>
+      <img src="/Universes/FO/icons/FOmenu-burger.svg" id="btnburger" alt="" />
+
+      <nav id="menuburger">
+        <a href="/Universes/FO/FO_Main.html" class="selected">Accueil</a>
+        <a href="/Universes/FO/FO_Ressources.html">Ressources</a>
+        <a href="/Universes/FO/FO_Résumé.html">Résumé</a>
+        <a href="/Universes/FO/FO_Timeline.html">Timeline</a>
+        <a href="/Universes/FO/FO_Calendrier.php">Agenda</a>
+        <a href="/api/user.php">Compte</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="citation">
+        <h2>WAR, WAR NEVER CHANGES</h2>
+        <p>
+          In the year 1945, my great-great grandfather, serving in the army,
+          wondered when he’d get to go home to his wife and the son he’d never
+          seen. He got his wish when the US ended World War II by dropping
+          atomic bombs on Hiroshima and Nagasaki. The World awaited Armageddon;
+          instead, something miraculous happened. We began to use atomic energy
+          not as a weapon, but as a nearly limitless source of power. People
+          enjoyed luxuries once thought the realm of science fiction. Domestic
+          robots, fusion-powered cars, portable computers. But then, in the 21st
+          century, people awoke from the American dream. Years of consumption
+          lead to shortages of every major resource. The entire world unraveled.
+          Peace became a distant memory. It is now the year 2077. We stand on
+          the brink of total war, and I am afraid. For myself, for my wife, for
+          my infant son – because if my time in the army taught me one thing:
+          it’s that war, war never changes.
+        </p>
+      </article>
+
+      <img id="Cover" src="/Universes/FO/img/FOCover.jpeg" alt="" />
+
+      <article class="intro">
+        Ceci n’est que la première version d’une adaptation personnelle des
+        règles de Fallout en version papier, basée sur les deux traductions
+        françaises de Fallout RPG 5.2 et Fallout PnP. De très bonnes idées étant
+        présentes dans les deux ouvrages, j’ai tenu à les mélanger et les
+        modifier afin qu’elles soient en accord, sans déséquilibrer le jeu ni
+        créer de trop importants jets de dés pouvant dangereusement ralentir les
+        parties. Bien sûr, comme dans tout jeu de rôles, il convient au MJ de
+        tenir ou non compte de ce qui va suivre. Premièrement, une partie des
+        sections présentes ci-dessous est encore incomplète, et la mise en page
+        est aussi chaotique que l'est la vie à New Reno. La liste des dons n'est
+        pas encore exhaustive. Deuxièmement, la quasi-totalité des règles
+        présentes ici le sont sous leur forme brute. Des détails, cas
+        particuliers, modifications et précisions seront amenés à apparaître (ou
+        disparaître) dans les versions futures, de même que certains tableaux et
+        listes d’équipement. Le sommaire est une simple ébauche, déjà parce que
+        le numéro des pages va être amené à changer, de même que le nom ou le
+        nombre des chapitres. J’ai modifié certaines tables que l’on peut
+        trouver dans les deux livres sus-cités parce que je trouvais les valeurs
+        trop abusées, ou au contraire, pas assez. Jusqu’à présent, aucun
+        désequilibre du jeu n’a été constaté. J’ai essayé de créer une feuille
+        de perso qui présente clairement le plus de données possibles et
+        nécessaires afin qu’on puisse rapidement y accéder, mais certains
+        joueurs pourront y trouver à redire. Dans ce cas, merci de me faire part
+        de vos idées. Si vous lisez ceci, c’est que vous pouvez me contacter.
+        Ceci est bien sûr une version privée, les quelques noms et images de ce
+        livre sont la propriété d’Interplay productions, Paragon Software,
+        Bethesda Softworks et ont été utilisés
+        <span style="text-decoration: underline">sans</span> leur permission.
+      </article>
+
+        <!-- Menu latéral -->
+      <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+          <path class="pipboy" d="M20 4 L6 16 L20 28" />
+          <path class="pipboy" d="M20 8 H58 V24 H20" />
+        </svg>
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+    </main>
+
+
+  
+    <footer class="footer">
+      ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM <br />
+      COPYRIGHT 2075-2077 ROBCO-INDUSTRIES <br />
+      -Display 1-
+    </footer>
+  </body>
+</html>

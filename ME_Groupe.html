@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" lang="fr" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="/Universes/ME/CSS/MEstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+    <title>Squad</title>
+  </head>
+
+  <body>
+ <header>
+      <a href="/index.html"><img id="main" src="/Universes/ME/img/MELogo.png" alt="" /></a>
+      <h1 id="titre"></h1>
+      <img src="/Universes/ME/icons/MEmenu-burger.svg" id="btnburger" alt="" />
+
+      <nav id="menuburger">
+        <a href="/Universes/ME/ME_Main.html" class="menu-link" alt="">Accueil</a>
+        <a href="/Universes/ME/ME_Codex.html" class="menu-link">Codex</a>
+        <a href="/Universes/ME/ME_Comms.php" class="menu-link">Comms</a>
+        <a href="/Universes/ME/ME_Timeline.html" class="menu-link">Timeline</a>
+        <a href="/Universes/ME/ME_Groupe.html" class="menu-link selected">Squad</a>
+        <a href="/api/user.php" class="menu-link">Compte</a>
+
+      </nav>
+    </header>
+
+    <main>
+<div class="diagramme">
+  <svg viewBox="0 0 1440 900" width="100%" height="auto">
+    <!-- Clip pour image centrale -->
+    <defs>
+      <clipPath id="ellipseClip">
+        <ellipse cx="720" cy="450" rx="300" ry="200"/>
+      </clipPath>
+    </defs>
+
+    <!-- Traits diagonaux -->
+    <line x1="720" y1="450" x2="300" y2="150" stroke="#b0c4de" stroke-width="3"/>
+    <line x1="720" y1="450" x2="300" y2="750" stroke="#b0c4de" stroke-width="3"/>
+    <line x1="720" y1="450" x2="1140" y2="150" stroke="#b0c4de" stroke-width="3"/>
+    <line x1="720" y1="450" x2="1140" y2="750" stroke="#b0c4de" stroke-width="3"/>
+
+    <!-- Image centrale (au-dessus des traits) -->
+    <a href="ME_Ship.html"><image xlink:href="/Universes/ME/img/tempest.png"
+           x="420" y="250" width="600" height="400"
+           clip-path="url(#ellipseClip)" />
+    </a>
+    <!-- Bulles / noms -->
+    <rect x="250" y="120" width="150" height="60" rx="30" ry="30" fill="#2d3b52" stroke="#b0c4de" stroke-width="3"/>
+    <text x="325" y="150" fill="#b0c4de" font-size="24" font-family="Arial" text-anchor="middle" alignment-baseline="middle"><a href="ME_Perso.html">Membre 1</a></text>
+
+    <rect x="250" y="720" width="150" height="60" rx="30" ry="30" fill="#2d3b52" stroke="#b0c4de" stroke-width="3"/>
+    <text x="325" y="750" fill="#b0c4de" font-size="24" font-family="Arial" text-anchor="middle" alignment-baseline="middle"><a href="ME_Perso.html">Membre 2</a></text>
+
+    <rect x="1040" y="120" width="150" height="60" rx="30" ry="30" fill="#2d3b52" stroke="#b0c4de" stroke-width="3"/>
+    <text x="1115" y="150" fill="#b0c4de" font-size="24" font-family="Arial" text-anchor="middle" alignment-baseline="middle"><a href="ME_Perso.html">Membre 3</a></text>
+
+    <rect x="1040" y="720" width="150" height="60" rx="30" ry="30" fill="#2d3b52" stroke="#b0c4de" stroke-width="3"/>
+    <text x="1115" y="750" fill="#b0c4de" font-size="24" font-family="Arial" text-anchor="middle" alignment-baseline="middle"><a href="ME_Perso.html">Membre 4</a></text>
+  </svg>
+</div>
+
+      <!-- Menu latéral -->
+    <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+        <rect x="0" y="0" width="64" height="32" fill="#1c2330"/>
+
+  <path d="M6 16 L20 4 L20 28 Z" stroke="#00bfff" stroke-width="3" fill="#00bfff"/>
+  <rect x="20" y="10" width="40" height="12" fill="#00bfff"/>
+  <line x1="28" y1="12" x2="48" y2="12" stroke="#ffffff" stroke-width="1"/>
+  <line x1="28" y1="20" x2="48" y2="20" stroke="#ffffff" stroke-width="1"/>
+</svg>
+
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+
+
+     <article></article>
+    </main>
+
+    <footer class="footer">
+      COPYRIGHT Renaud Lottiaux<br />
+      COPYRIGHT Bioware <br />
+    </footer>
+  </body>
+</html>

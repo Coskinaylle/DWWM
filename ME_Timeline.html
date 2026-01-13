@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" lang="fr" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+   <link rel="stylesheet" href="/Universes/ME/CSS/MEstyle.css" />
+    <script defer src="/Common/JS/script.js"></script>
+    <title>Timeline</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"><img id="main" src="/Universes/ME/img/MELogo.png" alt="" /></a>
+      <h1 id="titre"></h1>
+      <img src="/Universes/ME/icons/MEmenu-burger.svg" id="btnburger" alt="" />
+
+      <nav id="menuburger">
+        <a href="/Universes/ME/ME_Main.html" class="menu-link" alt="">Accueil</a>
+        <a href="/Universes/ME/ME_Codex.html" class="menu-link">Codex</a>
+        <a href="/Universes/ME/ME_Comms.php" class="menu-link">Comms</a>
+        <a href="/Universes/ME/ME_Timeline.html" class="menu-link selected">Timeline</a>
+        <a href="/Universes/ME/ME_Groupe.html" class="menu-link">Squad</a>
+        <a href="/api/user.php" class="menu-link">Compte</a>
+
+      </nav>
+    </header>
+
+    <main class="container">
+      <article>
+        <h3>Prehistoric Times <br>
+          (Unknown BCE - c.1 Bil. BCE)</h3>
+        <img src="/Universes/ME/img/Proth.webp" alt="" />
+      </article>
+      <article>
+        <h3>Pre-Prothean Times <br>
+          (c.1 Bil. BCE - c.68,000 BCE)</h3>
+        <img src="/Universes/ME/img/reaper.webp" alt="" />
+      </article>
+      <article>
+        <h3>Pre-Council Times <br> (c.68,000 BCE - 500 BCE)</h3>
+        <img src="/Universes/ME/img/prothe.webp" alt="" />
+      </article>
+      <article>
+        <h3>Council Era - Formation <br> (500 BCE - 1 CE)</h3>
+        <img src="/Universes/ME/img/Citadel.webp" alt="" />
+      </article>
+      <article>
+        <h3>Council Era - War and Rebellion <br>
+          (1 CE - 900 CE)</h3>
+        <img src="/Universes/ME/img/rachni.webp" alt="" />
+      </article>
+      <article>
+        <h3>Council Era - Expansion <br> (900 CE - 2157 CE)</h3>
+        <img src="/Universes/ME/img/geth.webp" alt="" />
+      </article>
+      <article>
+        <h3>Council Era - Advent of Humanity <br> (2157 CE - 2183 CE)</h3>
+        <img src="/Universes/ME/img/human.webp" alt="" />
+      </article>
+      <article>
+        <h3>Mass Effect <br> (2183 CE - 2186 CE)</h3>
+        <img src="/Universes/ME/img/destiny.webp" alt="" />
+      </article>
+      <article>
+        <h3>Andromeda Bound <br> (2186 CE - 2818 CE)</h3>
+        <img src="/Universes/ME/img/arch.webp" alt="" />
+      </article>
+      <article>
+        <h3>Nouvelle Ère <br> (2205 CE)</h3>
+        <img src="/Universes/ME/img/relay.webp" alt="" />
+      </article>
+      <article>
+        <h3>New Frontiers <br> (2818 CE - 2819 CE)</h3>
+        <img src="/Universes/ME/img/planet.webp" alt="" />
+      </article>
+      <!-- Menu latéral -->
+    <div id="game_menu">
+      <button id="toggle_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+        <rect x="0" y="0" width="64" height="32" fill="#1c2330"/>
+
+  <path d="M6 16 L20 4 L20 28 Z" stroke="#00bfff" stroke-width="3" fill="#00bfff"/>
+  <rect x="20" y="10" width="40" height="12" fill="#00bfff"/>
+  <line x1="28" y1="12" x2="48" y2="12" stroke="#ffffff" stroke-width="1"/>
+  <line x1="28" y1="20" x2="48" y2="20" stroke="#ffffff" stroke-width="1"/>
+</svg>
+
+      </button>
+      <div id="menu">
+        <p>Jet de dés</p>
+        <button>D2</button>
+        <button>D4</button>
+        <button>D6</button>
+        <button>D8</button>
+        <button>D10</button>
+        <button>D12</button>
+        <button>D20</button>
+        <button>D100</button>
+        <p id="result"></p>
+      </div>
+    </div>
+    </main>
+
+
+    <footer class="footer">
+      COPYRIGHT Renaud Lottiaux<br />
+      COPYRIGHT Bioware <br />
+    </footer>
+  </body>
+</html>

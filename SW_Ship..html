@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/Universes/SW/script.js"></script>
+<title>Fiche de Vaisseau SW</title>
+<link rel="stylesheet" href="/Universes/SW/CSS/SWstyle.css">
+</head>
+<body>
+<header>
+    <h1>Fiche de Vaisseau - Univers Star Wars</h1>
+    <p class="subtitle">Gestion façon feuille de personnage JDR</p>
+</header>
+
+<main>
+    <section class="ship-card">
+        <h2 id="ship-name">Transporteur Galactique</h2>
+
+        <div class="stat-section">
+            <h3>Statistiques</h3>
+            <p><strong>Vitesse :</strong> <span id="ship-speed">250</span> km/h</p>
+            <p><strong>Bouclier :</strong> <span id="ship-shield">50</span>/<span id="ship-shield-max">100</span></p>
+            <p><strong>Armes :</strong> <span id="ship-ammo">10</span> tirs (Dégâts: <span id="ship-damage">20</span>)</p>
+            <p><strong>Cargaison :</strong> <span id="ship-cargo">20</span>/<span id="ship-capacity">100</span></p>
+            <p><strong>Carburant :</strong> <span id="ship-fuel">100</span>%</p>
+        </div>
+
+        <div class="crew-section">
+            <h3>Équipage</h3>
+            <p><strong>Nombre :</strong> <span id="ship-crew">5</span>/<span id="ship-maxCrew">20</span></p>
+        </div>
+
+        <div class="skills-section">
+            <h3>Compétences Spéciales</h3>
+            <p><strong>Manœuvrabilité :</strong> <span id="ship-maneuver">70</span>%</p>
+            <p><strong>Sauts hyperespace :</strong> <span id="ship-hyperjumps">3</span></p>
+            <p><strong>Modules spéciaux :</strong> <span id="ship-modules">Radar, Camouflage</span></p>
+        </div>
+
+        <div class="actions-section">
+            <h3>Actions</h3>
+            <button onclick="modifyShip('speed',50)">Accélérer +50</button>
+            <button onclick="modifyShip('speed',-50)">Ralentir -50</button>
+            <button onclick="modifyShip('shield',20)">Renforcer Bouclier +20</button>
+            <button onclick="modifyShip('ammo',-1)">Tirer Arme -1</button>
+            <button onclick="modifyShip('ammo',1)">Recharger Armes +1</button>
+            <button onclick="modifyShip('cargo',10)">Charger +10</button>
+            <button onclick="modifyShip('cargo',-10)">Décharger -10</button>
+            <button onclick="modifyShip('fuel',20)">Faire le plein +20</button>
+            <button onclick="modifyShip('crew',1)">Ajouter équipier</button>
+            <button onclick="modifyShip('crew',-1)">Retirer équipier</button>
+            <button onclick="performHyperjump()">Saut Hyperespace</button>
+        </div>
+
+        <div class="log-section">
+            <h3>Journal de Bord</h3>
+            <div id="action-log" class="log"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© Univers Star Wars - Fiche de Vaisseau JDR</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+img {
+    max-width: 300px;
+    margin: 10rem;
+}
+
+img#profileAvatar {
+    margin: 3rem !important
+}
+
+.user-deleted {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #f8d7da;
+}
+
+
+/* Media queries desktop */
+@media screen and (min-device-width: 800px) {
+
+main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+img {
+    max-width: 500px;
+}
+
+}
